@@ -1,4 +1,6 @@
-# PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
+# PLEASE NOTE:
+
+This project is a continuation of the original, no longer maintained, [ActionBar-PullToRefresh](https://github.com/chrisbanes/ActionBar-PullToRefresh) library.
 
 * * *
 
