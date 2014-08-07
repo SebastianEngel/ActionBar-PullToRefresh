@@ -13,6 +13,14 @@ android {
         minSdkVersion 7
         targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
     }
+
+    lintOptions {
+        // The following check needs to be disabled. Reason:
+        // The stock library could actually set minSdkVersion to 14. But as the extra-abc/extra-abs
+        // libraries depend on it, its minSdkVersion must also be set to the lowest one, which is 7.
+        // Lint just doesn't recognize that.
+        disable 'NewApi'
+    }
 }
 
 apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

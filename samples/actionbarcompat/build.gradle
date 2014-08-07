@@ -22,6 +22,13 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    lintOptions {
+        // The following check needs to be disabled. Reason:
+        // When building the sample project from the top level project folder,
+        // the activity classes referenced in the AndroidManifest are not found.
+        disable 'MissingRegistered'
+    }
 }
 
 File propFile = file('signing.properties');
