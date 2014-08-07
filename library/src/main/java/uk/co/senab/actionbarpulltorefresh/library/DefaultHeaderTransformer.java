@@ -40,7 +40,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
-import fr.castorflex.android.smoothprogressbar.SmoothProgressDrawable;
 import uk.co.senab.actionbarpulltorefresh.library.sdk.Compat;
 
 /**
@@ -375,15 +374,6 @@ public class DefaultHeaderTransformer extends HeaderTransformer {
 
     private void applyProgressBarSettings() {
         if (mHeaderProgressBar != null) {
-            final int strokeWidth = mHeaderProgressBar.getResources()
-                    .getDimensionPixelSize(R.dimen.ptr_progress_bar_stroke_width);
-
-            mHeaderProgressBar.setIndeterminateDrawable(
-                    new SmoothProgressDrawable.Builder(mHeaderProgressBar.getContext())
-                            .color(mProgressDrawableColor)
-                            .strokeWidth(strokeWidth)
-                            .build());
-
             ShapeDrawable shape = new ShapeDrawable();
             shape.setShape(new RectShape());
             shape.getPaint().setColor(mProgressDrawableColor);
